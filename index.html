@@ -1,44 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Punit AI - Mahadev Bhakti & Learn Platform</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Punit AI – Mahadev Bhakti & Learn Platform</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #141e30, #243b55);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color: white;
+}
 
-    header {
-      width: 100%;
-      text-align: center;
-      padding: 25px 15px;
-      font-size: 26px;
-      font-weight: bold;
-      background: rgba(0,0,0,0.4);
-      backdrop-filter: blur(10px);
-      letter-spacing: 1px;
-    }
+/* NAVBAR */
+.navbar {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  background: rgba(0,0,0,0.3);
+}
 
-    .container {
-      width: 100%;
-      max-width: 900px;
-      padding: 30px 20px;
-    }
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+}
 
-    .card-link {
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+}
+
+/* CARD */
+.card-link {
   text-decoration: none;
   color: inherit;
   display: block;
@@ -46,50 +48,108 @@
 
 .card {
   background: white;
-  padding: 20px;
+  color: #222;
+  padding: 22px;
   margin: 20px 0;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+  position: relative;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+}
+
+.card:active {
+  transform: scale(0.97);
 }
 
 .card h2 {
-  margin-bottom: 10px;
-  color: #0b3d91;
+  margin-bottom: 8px;
+  color: #1e3c72;
+  font-weight: 700;
 }
 
 .card p {
+  font-size: 14px;
   color: #555;
 }
 
-    footer {
-      margin-top: auto;
-      width: 100%;
-      text-align: center;
-      padding: 20px;
-      background: rgba(0,0,0,0.5);
-      font-size: 14px;
-    }
-  </style>
+/* NEW BADGE */
+.badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: red;
+  color: white;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0.4;}
+  100% {opacity: 1;}
+}
+
+/* FOOTER */
+.footer {
+  background: rgba(0,0,0,0.4);
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer h3 {
+  margin-bottom: 10px;
+}
+
+.footer p {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.footer-links a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-top: 15px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-  🔱 Punit AI – Mahadev Bhakti & Learn Platform 🚀
-</header>
+<div class="navbar">
+🔱 PUNIT AI OFFICIAL PLATFORM 🚀
+</div>
+
+<div class="hero">
+  <h1>Mahadev Bhakti • Online Earning • AI Learning</h1>
+  <p>Daily updates, earning guides aur AI tools ek hi jagah.</p>
+</div>
 
 <div class="container">
 
 <a href="mahadev.html" class="card-link">
 <div class="card">
+<span class="badge">NEW</span>
 <h2>🔱 Mahadev Bhakti & Status</h2>
-<p>Daily Mahadev motivational status aur bhakti quotes.</p>
+<p>Daily bhakti status, Sawan special aur motivational quotes.</p>
 </div>
 </a>
 
@@ -102,6 +162,7 @@
 
 <a href="ai-tools.html" class="card-link">
 <div class="card">
+<span class="badge">NEW</span>
 <h2>🤖 AI Tools for Creators</h2>
 <p>Best AI tools for editing, reels aur blogging automation.</p>
 </div>
@@ -110,15 +171,27 @@
 <a href="website-guide.html" class="card-link">
 <div class="card">
 <h2>🌐 Website Guide</h2>
-<p>GitHub se website banana step-by-step seekhe.</p>
+<p>Step-by-step GitHub se website banana seekhe.</p>
 </div>
 </a>
 
 </div>
 
-<footer>
-  © 2026 Punit AI | Built with Devotion & Vision ❤️
-</footer>
+<!-- PROFESSIONAL FOOTER -->
+<div class="footer">
+  <h3>🔱 Punit AI</h3>
+  <p>Mahadev Bhakti | Online Earning | AI Learning Platform</p>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="website-guide.html">Guide</a>
+    <a href="ai-tools.html">AI Tools</a>
+  </div>
+
+  <div class="copyright">
+    © 2026 Punit AI | All Rights Reserved
+  </div>
+</div>
 
 </body>
 </html>
