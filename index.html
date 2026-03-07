@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -7,7 +8,9 @@
 
 <title>Punit AI | Mahadev Bhakti, AI Tools & Online Earning</title>
 
-<meta name="description" content="Punit AI par Mahadev Bhakti stories, AI tools, video editing learning aur online earning guides ek hi jagah.">
+<meta name="description" content="Mahadev Bhakti stories, AI tools, online earning aur website learning platform.">
+<meta name="keywords" content="Mahadev bhakti, AI tools, online earning, blogging, Punit AI">
+<meta name="author" content="Punit AI">
 
 <style>
 
@@ -29,10 +32,6 @@ font-size:26px;
 font-weight:bold;
 }
 
-nav{
-margin-top:10px;
-}
-
 nav a{
 color:white;
 text-decoration:none;
@@ -45,21 +44,18 @@ text-align:center;
 padding:60px 20px;
 }
 
-.hero h1{
-font-size:28px;
-}
-
 .search-box{
 text-align:center;
-margin:30px;
+margin:20px;
 }
 
 .search-box input{
 padding:12px;
 width:80%;
-max-width:400px;
+max-width:450px;
+border-radius:6px;
 border:none;
-border-radius:5px;
+font-size:15px;
 }
 
 .container{
@@ -78,29 +74,17 @@ gap:20px;
 background:#1c1c1c;
 padding:20px;
 border-radius:10px;
-transition:0.3s;
+transition:.3s;
 }
 
 .card:hover{
 transform:scale(1.05);
 }
 
-.card a{
-text-decoration:none;
-color:white;
-}
-
-.badge{
-background:#ff9800;
-padding:4px 8px;
-font-size:12px;
-border-radius:5px;
-}
-
 .section-title{
 margin-top:40px;
 font-size:22px;
-border-left:4px solid #ff9800;
+border-left:4px solid orange;
 padding-left:10px;
 }
 
@@ -112,7 +96,7 @@ border-radius:8px;
 }
 
 .article a{
-color:#ff9800;
+color:orange;
 text-decoration:none;
 }
 
@@ -135,11 +119,11 @@ color:#aaa;
 <div class="logo">🔱 Punit AI</div>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="mahadev.html">Mahadev Bhakti</a>
-<a href="ai-tools.html">AI Tools</a>
-<a href="earn-money.html">Online Earning</a>
-<a href="website-guide.html">Website Guide</a>
+<a href="#">Home</a>
+<a href="#">Trending</a>
+<a href="#">Search</a>
+<a href="#">About</a>
+<a href="#">Privacy Policy</a>
 </nav>
 
 </header>
@@ -148,91 +132,161 @@ color:#aaa;
 
 <h1>Mahadev Bhakti • AI Learning • Online Earning</h1>
 
-<p>Ek hi platform par knowledge, motivation aur digital learning.</p>
+<p>Knowledge aur motivation ek hi platform par.</p>
 
 </div>
 
 <div class="search-box">
 
-<input type="text" placeholder="Search articles...">
+<input type="text" id="searchInput" placeholder="Search articles..." onkeyup="searchArticles()">
 
 </div>
 
 <div class="container">
 
-<h2 class="section-title">🔥 Featured Sections</h2>
+<h2 class="section-title">🔥 Featured Categories</h2>
 
 <div class="grid">
 
 <div class="card">
-<a href="mahadev.html">
-<span class="badge">NEW</span>
 <h3>🔱 Mahadev Bhakti</h3>
-<p>Mahadev stories, Sawan status aur spiritual motivation.</p>
-</a>
+<p>Shiv stories aur bhakti inspiration.</p>
 </div>
 
 <div class="card">
-<a href="ai-tools.html">
-<span class="badge">NEW</span>
 <h3>🤖 AI Tools</h3>
-<p>Creators ke liye best AI tools aur automation.</p>
-</a>
+<p>Content creators ke liye powerful AI tools.</p>
 </div>
 
 <div class="card">
-<a href="earn-money.html">
 <h3>💰 Online Earning</h3>
-<p>Blogging, YouTube aur freelancing se paise kamaye.</p>
-</a>
+<p>Blogging aur internet se paise kamane ke tareeke.</p>
 </div>
 
 <div class="card">
-<a href="website-guide.html">
 <h3>🌐 Website Guide</h3>
-<p>GitHub se free website banana seekhe.</p>
-</a>
+<p>Free website banana aur grow karna.</p>
 </div>
 
 </div>
 
-<h2 class="section-title">📚 Latest Articles</h2>
+<h2 class="section-title">🔥 Trending Articles</h2>
 
-<div class="article">
+<div id="trending"></div>
 
-<a href="mahadev.html">
+<h2 class="section-title">📚 All Articles</h2>
 
-<h3>🔱 Mahadev Tapasya Story</h3>
-
-<p>Bhagwan hokar bhi tapasya karne wale Shiv ki motivational kahani.</p>
-
-</a>
-
-</div>
-
-<div class="article">
-
-<a href="ai-tools.html">
-
-<h3>🤖 Best AI Tools for Creators</h3>
-
-<p>Video editing aur content creation ke liye powerful AI tools.</p>
-
-</a>
-
-</div>
+<div id="articles"></div>
 
 </div>
 
 <footer>
 
-<h3>🔱 Punit AI</h3>
+<h3>Punit AI</h3>
 
 <p>Mahadev Bhakti | AI Learning | Online Earning</p>
 
-<p>© 2026 Punit AI | All Rights Reserved</p>
+<p>© 2026 Punit AI</p>
 
 </footer>
 
+<script>
+
+/* AUTO BLOG DATABASE */
+
+const blogPosts = [
+
+{
+title:"Mahadev Tapasya Story",
+desc:"Bhagwan Shiv ki tapasya ki powerful kahani.",
+link:"#",
+trend:true
+},
+
+{
+title:"Best AI Tools for Creators",
+desc:"Video editing aur content creation ke best AI tools.",
+link:"#",
+trend:true
+},
+
+{
+title:"Online Paise Kaise Kamaye",
+desc:"Blogging aur internet se paise kamane ka guide.",
+link:"#",
+trend:false
+},
+
+{
+title:"Free Website Kaise Banaye",
+desc:"GitHub se free website banana seekho.",
+link:"#",
+trend:false
+}
+
+];
+
+/* LOAD ARTICLES */
+
+function loadArticles(){
+
+let articleHTML="";
+let trendingHTML="";
+
+blogPosts.forEach(post=>{
+
+let html=
+
+`<div class="article">
+
+<a href="${post.link}">
+
+<h3>${post.title}</h3>
+
+<p>${post.desc}</p>
+
+</a>
+
+</div>`;
+
+articleHTML+=html;
+
+if(post.trend){
+
+trendingHTML+=html;
+
+}
+
+});
+
+document.getElementById("articles").innerHTML=articleHTML;
+
+document.getElementById("trending").innerHTML=trendingHTML;
+
+}
+
+loadArticles();
+
+/* SEARCH SYSTEM */
+
+function searchArticles(){
+
+let input=document.getElementById("searchInput").value.toLowerCase();
+
+let posts=document.querySelectorAll(".article");
+
+posts.forEach(post=>{
+
+let text=post.innerText.toLowerCase();
+
+post.style.display=text.includes(input) ? "" : "none";
+
+});
+
+}
+
+</script>
+
 </body>
 </html>
+```
